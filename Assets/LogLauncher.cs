@@ -30,7 +30,7 @@ public class LogLauncher : MonoBehaviour
             GameObject newBuche = Instantiate(monPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             liste.Add(newBuche);
             Rigidbody rb = newBuche.GetComponent<Rigidbody>();
-            rb.AddForce(Random.Range(-2,2), Random.Range(6, 10), Random.Range(-15, -8), ForceMode.Impulse);
+            rb.AddForce(Random.Range(0,0), Random.Range(8,8), Random.Range(-15, -15), ForceMode.Impulse);
             rb.AddTorque(Random.Range(-20, 20), 0, Random.Range(-20, 20));
 
             if(current > interpolationPeriod * 3)
