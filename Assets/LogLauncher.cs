@@ -35,9 +35,9 @@ public class LogLauncher : MonoBehaviour
             //rb.AddForce(Random.Range(-23,-23), Random.Range(10,10), Random.Range(-5, -5), ForceMode.Impulse);
 
             Vector3 vel = camPos.position - rb.transform.position;
-            vel.y = vel.y * 9;
-            vel.x = vel.x / 1.8f;
-            vel.z = vel.z / 1.8f;
+            vel.y = vel.y * 5;
+            vel.x = vel.x / 1.5f;
+            vel.z = vel.z / 1.5f;
 
             rb.velocity = vel;
 

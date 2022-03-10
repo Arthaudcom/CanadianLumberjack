@@ -6,6 +6,7 @@ using System;
 public class Metamorphose : MonoBehaviour
 {
     public GameObject log;
+    public GameObject axe;
     public GameObject logCut;
     private bool sliced = false;
     // Start is called before the first frame update
