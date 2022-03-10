@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LogLauncher : MonoBehaviour
 {
+    public Transform camPos;
+
     public GameObject monPrefab;
     private float time = 0.0f;
 
@@ -27,10 +29,18 @@ public class LogLauncher : MonoBehaviour
         {
             time += interpolationPeriod;
 
-            GameObject newBuche = Instantiate(monPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject newBuche = Instantiate(monPrefab, new Vector3(133, 0.5f, 81), Quaternion.identity);
             liste.Add(newBuche);
             Rigidbody rb = newBuche.GetComponent<Rigidbody>();
-            rb.AddForce(Random.Range(0,0), Random.Range(8,8), Random.Range(-15, -15), ForceMode.Impulse);
+            //rb.AddForce(Random.Range(-23,-23), Random.Range(10,10), Random.Range(-5, -5), ForceMode.Impulse);
+
+            Vector3 vel = camPos.position - rb.transform.position;
+            vel.y = vel.y * 9;
+            vel.x = vel.x / 1.8f;
+            vel.z = vel.z / 1.8f;
+
+            rb.velocity = vel;
+
             rb.AddTorque(Random.Range(-20, 20), 0, Random.Range(-20, 20));
 
             if(current > interpolationPeriod * 3)
