@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Metamorphose : MonoBehaviour
 {
@@ -26,14 +27,15 @@ public class Metamorphose : MonoBehaviour
 
             Vector3 velocity = gameObject.GetComponent<Rigidbody>().velocity;
 
+            Debug.Log(velocity);
 
-			
+
             Destroy(this.gameObject);
             GameObject cut1 = Instantiate(logCut, posLog, Quaternion.identity);
             GameObject cut2 = Instantiate(logCut, posLog, Quaternion.identity);
 
-            cut1.GetComponent<Rigidbody>().AddForce(new Vector3(-velocity.x, -velocity.y, velocity.z));
-            cut2.GetComponent<Rigidbody>().AddForce(new Vector3(-velocity.x, -velocity.y, velocity.z));
+            cut1.GetComponent<Rigidbody>().AddForce(50*(new Vector3(Math.Abs(velocity.x)+1, velocity.y+1, -velocity.z-1)));
+            cut2.GetComponent<Rigidbody>().AddForce(50*(new Vector3(-Math.Abs(velocity.x)-1, -velocity.y-1, -velocity.z-1)));
 
             Debug.Log(rb.angularVelocity);
 
