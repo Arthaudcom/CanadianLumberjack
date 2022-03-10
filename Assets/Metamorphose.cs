@@ -11,6 +11,7 @@ public class Metamorphose : MonoBehaviour
     {
         
     }
+    
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -18,9 +19,11 @@ public class Metamorphose : MonoBehaviour
         {
             Debug.Log("HIT");
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-            Vector3 posLog = rb.transform.position;
+            Vector3 posLog = gameObject.transform.position;
 
-            Destroy(collision.gameObject);
+			gameObject.GetComponent<BoxCollider>().
+			
+            Destroy(this.gameObject);
             Instantiate(logCut, posLog, Quaternion.identity);
             Instantiate(logCut, posLog, Quaternion.identity);
 
