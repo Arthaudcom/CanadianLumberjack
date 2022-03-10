@@ -6,6 +6,7 @@ public class Metamorphose : MonoBehaviour
 {
     public GameObject log;
     public GameObject logCut;
+    private bool sliced = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +16,15 @@ public class Metamorphose : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Slice")
+        if (collision.gameObject.tag == "Slice" && !sliced)
         {
             Debug.Log("HIT");
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 posLog = gameObject.transform.position;
 
-			gameObject.GetComponent<BoxCollider>().enabled = false;
+            sliced = true;
+
+
 			
             Destroy(this.gameObject);
             Instantiate(logCut, posLog, Quaternion.identity);

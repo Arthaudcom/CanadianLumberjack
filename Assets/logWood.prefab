@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1369421682761932076}
   - component: {fileID: 5093003400995801103}
   - component: {fileID: -982933526956744037}
-  - component: {fileID: -1220733130893982237}
   m_Layer: 0
   m_Name: logWood
   m_TagString: Untagged
@@ -129,16 +128,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   log: {fileID: 3288845560712882695, guid: 54bf0278457761e40ba96a71caf95a87, type: 3}
   logCut: {fileID: 1007790099373706418, guid: 29defb9e911b135469c774f079201ac0, type: 3}
---- !u!65 &-1220733130893982237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8306113825071147796}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
