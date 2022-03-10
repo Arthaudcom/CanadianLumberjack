@@ -21,7 +21,7 @@ public class Metamorphose : MonoBehaviour
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 posLog = gameObject.transform.position;
 
-			gameObject.GetComponent<BoxCollider>().
+			gameObject.GetComponent<BoxCollider>().enabled = false;
 			
             Destroy(this.gameObject);
             Instantiate(logCut, posLog, Quaternion.identity);
