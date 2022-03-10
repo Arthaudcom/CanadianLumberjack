@@ -36,8 +36,8 @@ public class LogLauncher : MonoBehaviour
 
             Vector3 vel = camPos.position - rb.transform.position;
             vel.y = vel.y * 5;
-            vel.x = vel.x / 1.5f;
-            vel.z = vel.z / 1.5f;
+            vel.x = vel.x / 1.2f;
+            vel.z = vel.z / 1.2f;
 
             rb.velocity = vel;
 

@@ -127,4 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   log: {fileID: 3288845560712882695, guid: 54bf0278457761e40ba96a71caf95a87, type: 3}
+  axe: {fileID: 5352488413432524198, guid: acaf825c93ab85d4eb8c3538ef223657, type: 3}
   logCut: {fileID: 1007790099373706418, guid: 29defb9e911b135469c774f079201ac0, type: 3}
