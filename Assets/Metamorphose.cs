@@ -24,11 +24,16 @@ public class Metamorphose : MonoBehaviour
 
             sliced = true;
 
+            Vector3 velocity = gameObject.GetComponent<Rigidbody>().velocity;
+
 
 			
             Destroy(this.gameObject);
-            Instantiate(logCut, posLog, Quaternion.identity);
-            Instantiate(logCut, posLog, Quaternion.identity);
+            GameObject cut1 = Instantiate(logCut, posLog, Quaternion.identity);
+            GameObject cut2 = Instantiate(logCut, posLog, Quaternion.identity);
+
+            cut1.GetComponent<Rigidbody>().AddForce(new Vector3(-velocity.x, -velocity.y, velocity.z));
+            cut2.GetComponent<Rigidbody>().AddForce(new Vector3(-velocity.x, -velocity.y, velocity.z));
 
             Debug.Log(rb.angularVelocity);
 
