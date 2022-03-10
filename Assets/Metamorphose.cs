@@ -5,6 +5,7 @@ using UnityEngine;
 public class Metamorphose : MonoBehaviour
 {
     public GameObject log;
+    public GameObject logCut;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,15 @@ public class Metamorphose : MonoBehaviour
         {
             Debug.Log("HIT");
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 posLog = rb.transform.position;
+
+            Destroy(collision.gameObject);
+            Instantiate(logCut, posLog, Quaternion.identity);
+            Instantiate(logCut, posLog, Quaternion.identity);
+
             Debug.Log(rb.angularVelocity);
-            SteamVR
-            gameObject.GetComponent<Rigidbody>().AddForce(/*0, 0, 500*/-10*(collision.gameObject.GetComponent<Rigidbody>().velocity));
+
+            //gameObject.GetComponent<Rigidbody>().AddForce(/*0, 0, 500*/-10*(collision.gameObject.GetComponent<Rigidbody>().velocity));
         }
     }
 
