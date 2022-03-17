@@ -10,11 +10,12 @@ public class Metamorphose : MonoBehaviour
     public GameObject axe;
     public GameObject logCut;
     private bool sliced = false;
-    public Text score;
+    public Score scoreScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        score.
+        scoreScript = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<Score>();
     }
     
 
@@ -22,6 +23,9 @@ public class Metamorphose : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slice" && !sliced)
         {
+
+            scoreScript.addScore();
+
             Debug.Log("HIT");
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 posLog = gameObject.transform.position;

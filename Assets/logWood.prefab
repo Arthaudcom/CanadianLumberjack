@@ -129,4 +129,4 @@ MonoBehaviour:
   log: {fileID: 3288845560712882695, guid: 54bf0278457761e40ba96a71caf95a87, type: 3}
   axe: {fileID: 5352488413432524198, guid: acaf825c93ab85d4eb8c3538ef223657, type: 3}
   logCut: {fileID: 1007790099373706418, guid: 29defb9e911b135469c774f079201ac0, type: 3}
-  score: {fileID: 4133317727284192633, guid: 1f9b1eda690c0664089a671a7a50c41c, type: 3}
+  gameManager: {fileID: 3002656785600433198, guid: ad6f8ae973023b4478a39fc6590cc110, type: 3}
