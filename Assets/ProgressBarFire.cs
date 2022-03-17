@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ProgressBarFire : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class ProgressBarFire : MonoBehaviour
     void Update()
     {
         slider.value = slider.value - 0.2f;
-        if(slider.value )
+        if(slider.value <= 0)
+        {
+            SceneManager.LoadScene("Lost");
+        }
     }
 
     public void addValue()
