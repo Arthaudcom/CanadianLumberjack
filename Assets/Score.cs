@@ -20,7 +20,9 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(camPos.transform);
+        //Vector3 targetPoint = Camera.main.transform.position;
+
+        //scoreText.transform.LookAt(targetPoint, Vector3.up);
     }
 
     public void addScore()

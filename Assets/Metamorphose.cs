@@ -11,11 +11,13 @@ public class Metamorphose : MonoBehaviour
     public GameObject logCut;
     private bool sliced = false;
     public Score scoreScript;
+    public ProgressBarFire progressBar;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreScript = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<Score>();
+        progressBar = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<ProgressBarFire>();
     }
     
 
@@ -25,8 +27,8 @@ public class Metamorphose : MonoBehaviour
         {
 
             scoreScript.addScore();
+            progressBar.addValue();
 
-            Debug.Log("HIT");
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 posLog = gameObject.transform.position;
 

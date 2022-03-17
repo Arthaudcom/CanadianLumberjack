@@ -56,7 +56,7 @@ public class LogLauncher : MonoBehaviour
                 GameObject o = liste[0];
                 liste.Remove(o);
                 Destroy(o);
-                Debug.Log(liste.Count);
+
             }
 
         }
