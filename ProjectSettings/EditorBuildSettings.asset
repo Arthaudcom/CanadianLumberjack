@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/mapCanadianLumberjack.unity
+    guid: 83142b7f344358e4e8f0f521d72eab5b
+  - enabled: 1
+    path: Assets/Scenes/Lost.unity
+    guid: a1bf70170a92df6408484aedfe6ab814
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dea2e183b30b97b41a61f5786922bc18, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 555987b95895367478d30c6b32d4362f, type: 2}
