@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Metamorphose : MonoBehaviour
 {
@@ -9,10 +10,11 @@ public class Metamorphose : MonoBehaviour
     public GameObject axe;
     public GameObject logCut;
     private bool sliced = false;
+    public Text score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        score.
     }
     
 
@@ -44,6 +46,9 @@ public class Metamorphose : MonoBehaviour
             Debug.Log(rb.angularVelocity);
 
             //gameObject.GetComponent<Rigidbody>().AddForce(/*0, 0, 500*/-10*(collision.gameObject.GetComponent<Rigidbody>().velocity));
+
+
+            
         }
     }
 
