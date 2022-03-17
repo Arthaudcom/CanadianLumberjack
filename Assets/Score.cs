@@ -9,6 +9,7 @@ public class Score : MonoBehaviour
     public int score;
     public Text scoreText;
     public Score gameManager;
+    public Transform camPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(camPos.position);
     }
 
     public void addScore()
