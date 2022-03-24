@@ -33,10 +33,14 @@ public class Metamorphose : MonoBehaviour
         if (collision.gameObject.tag == "Slice" && !sliced)
         {
 
+            GameObject hache = collision.gameObject.GetComponent<GameObject>();
+
+            ActionBasedController controller = 
+
             scoreScript.addScore();
             progressBar.addValue();
 
-            rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 50);
+            rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 2);
 
 
             int index = UnityEngine.Random.Range(0, chopList.Count);
