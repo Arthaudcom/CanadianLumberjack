@@ -44,10 +44,10 @@ public class Metamorphose : MonoBehaviour
 
             if (collision.gameObject.GetComponent<DifferenciateHand>().heldIn == "left")
             {
-                leftController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.5f);
+                leftController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.2f);
             } else
             {
-                rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.5f);
+                rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.2f);
             }
 
 
