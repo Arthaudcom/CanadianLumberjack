@@ -12,6 +12,7 @@ public class Metamorphose : MonoBehaviour
     private bool sliced = false;
     public Score scoreScript;
     public ProgressBarFire progressBar;
+    public List<AudioClip> chopList;
 
     // Start is called before the first frame update
     void Start()
@@ -29,27 +30,28 @@ public class Metamorphose : MonoBehaviour
             scoreScript.addScore();
             progressBar.addValue();
 
-            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            int index = UnityEngine.Random.Range(0, chopList.Count);
+            AudioClip chop = chopList[index];
+
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.clip = chop;
+            audio.Play();
+
+
             Vector3 posLog = gameObject.transform.position;
 
             sliced = true;
-
-            Vector3 velocity = axe.GetComponent<Rigidbody>().velocity;
-
-            Debug.Log(velocity);
 
 
             Destroy(this.gameObject);
             GameObject cut1 = Instantiate(logCut, posLog, Quaternion.identity);
             GameObject cut2 = Instantiate(logCut, posLog, Quaternion.identity);
 
-            cut1.GetComponent<Rigidbody>().AddForce(50 * (new Vector3(velocity.x + 1, velocity.y + 1, velocity.z - 1)));
-            cut2.GetComponent<Rigidbody>().AddForce(50 * (new Vector3(velocity.x - 1, velocity.y - 1, velocity.z - 1)));
+            cut2.GetComponent<Rigidbody>().AddForce(50 * (new Vector3(- 1, - 1, - 1)));
+            cut1.GetComponent<Rigidbody>().AddForce(50 * (new Vector3(1,  1, - 1)));
 
             //cut1.GetComponent<Rigidbody>().AddForce(50*(new Vector3(Math.Abs(velocity.x)+1, velocity.y+1, -velocity.z-1)));
             //cut2.GetComponent<Rigidbody>().AddForce(50*(new Vector3(-Math.Abs(velocity.x)-1, -velocity.y-1, -velocity.z-1)));
-
-            Debug.Log(rb.angularVelocity);
 
             //gameObject.GetComponent<Rigidbody>().AddForce(/*0, 0, 500*/-10*(collision.gameObject.GetComponent<Rigidbody>().velocity));
 

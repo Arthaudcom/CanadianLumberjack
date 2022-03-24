@@ -23,7 +23,7 @@ public class LogLauncher : MonoBehaviour
     void Update()
     {
 
-        float current =Time.time;
+        float current = Time.time;
 
         if (current > time)
         {
