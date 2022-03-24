@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using ArmesScript;
 
 public class Score : MonoBehaviour
 
@@ -20,9 +21,14 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPoint = Camera.main.transform.position;
+        //lignes pour que le text se trouve en face du regard du joueur
+        //Vector3 targetPoint = Camera.main.transform.position;
+        //scoreText.transform.LookAt(targetPoint, Vector3.up);
 
-        scoreText.transform.LookAt(targetPoint, Vector3.up);
+        if(score >= 500)
+        {
+            ArmesScript.deleteArmes();
+        }
     }
 
     public void addScore()
