@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using ArmesScript;
+
 
 public class Score : MonoBehaviour
 
@@ -11,6 +11,8 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Score gameManager;
     public Transform camPos;
+    ArmesScript armesScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +27,10 @@ public class Score : MonoBehaviour
         //Vector3 targetPoint = Camera.main.transform.position;
         //scoreText.transform.LookAt(targetPoint, Vector3.up);
 
+
         if(score >= 500)
         {
-            ArmesScript.deleteArmes();
+            armesScript.deleteArmes();
         }
     }
 

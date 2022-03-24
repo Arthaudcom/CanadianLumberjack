@@ -17,7 +17,7 @@ public class ArmesScript : MonoBehaviour
         
     }
 
-    void deleteArmes()
+    public void deleteArmes()
     {
         foreach(GameObject arme in currentArme)
         {
