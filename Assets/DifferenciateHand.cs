@@ -31,4 +31,18 @@ public class DifferenciateHand : MonoBehaviour
             heldIn = "right";
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "LeftHand")
+        {
+            Debug.Log("LeftHand : " + gameObject.name);
+            heldIn = "none";
+        }
+        if (other.gameObject.tag == "RightHand")
+        {
+            Debug.Log("RightHand : " + gameObject.name);
+            heldIn = "none";
+        }
+    }
 }
