@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5351210079864083478}
   - component: {fileID: 5351210079864083479}
   - component: {fileID: 5351210079864083480}
-  - component: {fileID: 5151815967067992376}
+  - component: {fileID: 2700513010882541506}
   m_Layer: 0
   m_Name: Axe (1)
   m_TagString: Slice
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &5151815967067992376
+--- !u!114 &2700513010882541506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5352488413432524198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8564ffb3700d244da828b4be216afd0, type: 3}
+  m_Script: {fileID: 11500000, guid: dc992fb015418094585e83b4cb899346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentArme: []
+  heldIn: 
