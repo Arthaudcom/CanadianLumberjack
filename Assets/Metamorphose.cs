@@ -34,8 +34,7 @@ public class Metamorphose : MonoBehaviour
             AudioClip chop = chopList[index];
 
             AudioSource audio = GetComponent<AudioSource>();
-            audio.clip = chop;
-            audio.Play();
+            audio.PlayOneShot(chop);
 
 
             Vector3 posLog = gameObject.transform.position;
