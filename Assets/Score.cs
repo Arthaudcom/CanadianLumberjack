@@ -11,12 +11,13 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Score gameManager;
     public Transform camPos;
-    ArmesScript armesScript;
+    ArmesScript armesScript = new ArmesScript();
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText.GetComponent<Text>().text = "Score: "+ score;
+
        
     }
 
