@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         scoreText.GetComponent<Text>().text = "Score: "+ score;
-        armesScript = GameObject.FindGameObjectWithTag("Armes").GetComponent<ArmesScript>();
+        //armesScript = GameObject.FindGameObjectWithTag("Armes").GetComponent<ArmesScript>();
        
     }
 
