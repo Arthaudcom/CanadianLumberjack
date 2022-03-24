@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Slice
   - GameManagerTag
+  - RightHand
+  - LeftHand
   layers:
   - Default
   - TransparentFX
