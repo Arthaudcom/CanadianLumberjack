@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Metamorphose : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Metamorphose : MonoBehaviour
     public ProgressBarFire progressBar;
     public List<AudioClip> chopList;
     public AudioSource cameraAudioSource;
+    public GameObject rightController;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,7 @@ public class Metamorphose : MonoBehaviour
         scoreScript = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<Score>();
         progressBar = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<ProgressBarFire>();
         cameraAudioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+        rightController = GameObject.FindGameObjectWithTag("RightHand");
     }
     
 
@@ -29,8 +33,15 @@ public class Metamorphose : MonoBehaviour
         if (collision.gameObject.tag == "Slice" && !sliced)
         {
 
+            GameObject hache = collision.gameObject.GetComponent<GameObject>();
+
+            //ActionBasedController controller = 
+
             scoreScript.addScore();
             progressBar.addValue();
+
+            rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 2);
+
 
             int index = UnityEngine.Random.Range(0, chopList.Count);
             AudioClip chop = chopList[index];
