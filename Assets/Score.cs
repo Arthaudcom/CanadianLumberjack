@@ -32,6 +32,7 @@ public class Score : MonoBehaviour
         if(score >= 500)
         {
             armesScript.deleteArmes();
+            armesScript.newArme();
         }
     }
 
