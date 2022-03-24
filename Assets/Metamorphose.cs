@@ -36,7 +36,7 @@ public class Metamorphose : MonoBehaviour
             scoreScript.addScore();
             progressBar.addValue();
 
-            rightController.GetComponent<ActionBasedController>().SendHapticImpulse(50, 50);
+            rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 50);
 
 
             int index = UnityEngine.Random.Range(0, chopList.Count);
