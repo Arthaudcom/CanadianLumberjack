@@ -25,8 +25,8 @@ public class Metamorphose : MonoBehaviour
         scoreScript = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<Score>();
         progressBar = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<ProgressBarFire>();
         cameraAudioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
-        rightController = GameObject.FindGameObjectWithTag("RightHand");
-        leftController = GameObject.FindGameObjectWithTag("LeftHand");
+        rightController = GameObject.FindGameObjectWithTag("RightController");
+        leftController = GameObject.FindGameObjectWithTag("LeftController");
     }
     
 
