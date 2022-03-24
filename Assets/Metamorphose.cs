@@ -13,12 +13,14 @@ public class Metamorphose : MonoBehaviour
     public Score scoreScript;
     public ProgressBarFire progressBar;
     public List<AudioClip> chopList;
+    public AudioSource cameraAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreScript = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<Score>();
         progressBar = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<ProgressBarFire>();
+        cameraAudioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
     }
     
 
@@ -32,9 +34,7 @@ public class Metamorphose : MonoBehaviour
 
             int index = UnityEngine.Random.Range(0, chopList.Count);
             AudioClip chop = chopList[index];
-
-            AudioSource audio = GetComponent<AudioSource>();
-            audio.PlayOneShot(chop);
+            cameraAudioSource.PlayOneShot(chop);
 
 
             Vector3 posLog = gameObject.transform.position;
