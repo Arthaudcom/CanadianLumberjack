@@ -16,6 +16,7 @@ public class Metamorphose : MonoBehaviour
     public List<AudioClip> chopList;
     public AudioSource cameraAudioSource;
     public GameObject rightController;
+    public GameObject leftController;
     
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class Metamorphose : MonoBehaviour
         progressBar = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<ProgressBarFire>();
         cameraAudioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
         rightController = GameObject.FindGameObjectWithTag("RightHand");
+        leftController = GameObject.FindGameObjectWithTag("LeftHand");
     }
     
 
@@ -40,7 +42,13 @@ public class Metamorphose : MonoBehaviour
             scoreScript.addScore();
             progressBar.addValue();
 
-            
+            if (collision.gameObject.GetComponent<DifferenciateHand>().heldIn == "left")
+            {
+                leftController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.5f);
+            } else
+            {
+                rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.5f);
+            }
 
 
             int index = UnityEngine.Random.Range(0, chopList.Count);
