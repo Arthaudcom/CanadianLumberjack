@@ -230,6 +230,8 @@ MonoBehaviour:
   currentArme:
   - {fileID: 1321243577}
   - {fileID: 1261663138}
+  tronc_fab: {fileID: 4719076941979770649, guid: 5eeae2c2aa776ac46be67ae162d9512d, type: 3}
+  camPos: {fileID: 966067195}
 --- !u!4 &93254270
 Transform:
   m_ObjectHideFlags: 0
@@ -754,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -906,7 +908,7 @@ GameObject:
   - component: {fileID: 683152326}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: LeftController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2228,7 +2230,7 @@ GameObject:
   - component: {fileID: 1047844056}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: RightController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

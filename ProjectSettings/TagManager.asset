@@ -9,6 +9,8 @@ TagManager:
   - RightHand
   - LeftHand
   - Armes
+  - RightController
+  - LeftController
   layers:
   - Default
   - TransparentFX

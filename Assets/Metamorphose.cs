@@ -25,8 +25,8 @@ public class Metamorphose : MonoBehaviour
         scoreScript = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<Score>();
         progressBar = GameObject.FindGameObjectWithTag("GameManagerTag").GetComponent<ProgressBarFire>();
         cameraAudioSource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
-        rightController = GameObject.FindGameObjectWithTag("RightHand");
-        leftController = GameObject.FindGameObjectWithTag("LeftHand");
+        rightController = GameObject.FindGameObjectWithTag("RightController");
+        leftController = GameObject.FindGameObjectWithTag("LeftController");
     }
     
 
@@ -44,10 +44,11 @@ public class Metamorphose : MonoBehaviour
 
             if (collision.gameObject.GetComponent<DifferenciateHand>().heldIn == "left")
             {
-                leftController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.5f);
-            } else
+                leftController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.2f);
+            } else if (collision.gameObject.GetComponent<DifferenciateHand>().heldIn == "right")
             {
-                rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.5f);
+                rightController.GetComponent<ActionBasedController>().SendHapticImpulse(1, 0.2f);
+                rightController.GetComponent<ActionBasedController>().Get
             }
 
 
