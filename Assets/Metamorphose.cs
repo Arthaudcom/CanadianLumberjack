@@ -35,7 +35,7 @@ public class Metamorphose : MonoBehaviour
 
             GameObject hache = collision.gameObject.GetComponent<GameObject>();
 
-            ActionBasedController controller = 
+            //ActionBasedController controller = 
 
             scoreScript.addScore();
             progressBar.addValue();
