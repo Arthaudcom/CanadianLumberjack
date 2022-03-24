@@ -17,7 +17,7 @@ public class DifferenciateHand : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "LeftHand") { Debug.Log("LeftHand : " + gameObject.name); }
-        if(other.tag == "RightHand") { Debug.Log("RightHand : " + gameObject.name); }
+        if(other.gameObject.tag == "LeftHand") { Debug.Log("LeftHand : " + gameObject.name); }
+        if(other.gameObject.tag == "RightHand") { Debug.Log("RightHand : " + gameObject.name); }
     }
 }
