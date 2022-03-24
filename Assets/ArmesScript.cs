@@ -29,6 +29,8 @@ public class ArmesScript : MonoBehaviour
         }
     }
     public void newArme()
+
+    
     {
         GameObject tronconeuse = Instantiate(tronc_fab, new Vector3(133, 0.5f, 81), Quaternion.identity);
             currentArme.Add(tronconeuse);
