@@ -28,7 +28,7 @@ public class ProgressBarFire : MonoBehaviour
 
     public void addValue()
     {
-        slider.value = slider.value + 100;
+        slider.value = slider.value + 200;
 
 
     }
