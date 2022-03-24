@@ -21,7 +21,7 @@ public class ArmesScript : MonoBehaviour
     {
         foreach(GameObject arme in currentArme)
         {
-            Destroy(arme);
+            //Destroy(arme);
         }
     }
 }
