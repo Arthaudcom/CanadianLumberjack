@@ -29,9 +29,10 @@ public class Score : MonoBehaviour
         //scoreText.transform.LookAt(targetPoint, Vector3.up);
 
 
-        if(score >= 500)
+        if(score >= 3500)
         {
             armesScript.deleteArmes();
+            armesScript.newArme();
         }
     }
 
