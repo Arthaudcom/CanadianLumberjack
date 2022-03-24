@@ -5,6 +5,9 @@ using UnityEngine;
 public class DifferenciateHand : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public string heldIn;
+
     void Start()
     {
         
@@ -17,7 +20,15 @@ public class DifferenciateHand : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "LeftHand") { Debug.Log("LeftHand : " + gameObject.name); }
-        if(other.gameObject.tag == "RightHand") { Debug.Log("RightHand : " + gameObject.name); }
+        if(other.gameObject.tag == "LeftHand")
+        { 
+            Debug.Log("LeftHand : " + gameObject.name);
+            heldIn = "left";
+        }
+        if(other.gameObject.tag == "RightHand")
+        {
+            Debug.Log("RightHand : " + gameObject.name);
+            heldIn = "right";
+        }
     }
 }
