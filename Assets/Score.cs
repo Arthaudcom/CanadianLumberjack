@@ -12,6 +12,7 @@ public class Score : MonoBehaviour
     public Score gameManager;
     public Transform camPos;
     public ArmesScript armesScript;
+    public bool t = true;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,11 @@ public class Score : MonoBehaviour
         //scoreText.transform.LookAt(targetPoint, Vector3.up);
 
 
-        if(score >= 500)
+        if(score >= 500 && t)
         {
             armesScript.deleteArmes();
             armesScript.newArme();
+            t = false;
         }
     }
 
