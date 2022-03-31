@@ -23,7 +23,7 @@ public class WeaponManager : MonoBehaviour
         {
 
             limit += 500;
-            instanciateWeapon(weapons[currentWeapon]);
+            instanciateWeapon(weapons[Random.Range(0, weapons.Count - 1)]);
             currentWeapon++;
 
         }
