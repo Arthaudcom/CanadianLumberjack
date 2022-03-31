@@ -19,7 +19,7 @@ public class ProgressBarFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = slider.value - 0.7f;
+        slider.value = slider.value - 1.5f;
         if(slider.value <= 0)
         {
             SceneManager.LoadScene("Lost");
