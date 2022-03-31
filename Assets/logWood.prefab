@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -982933526956744037}
   m_Layer: 0
   m_Name: logWood
-  m_TagString: Untagged
+  m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,3 +137,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 68eb479d3c3d20d419133ef36e70d23a, type: 3}
   - {fileID: 8300000, guid: 0ec5196136c40a34fb17ad0e465fb019, type: 3}
   cameraAudioSource: {fileID: 0}
+  rightController: {fileID: 0}
+  leftController: {fileID: 0}
