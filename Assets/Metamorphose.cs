@@ -34,10 +34,8 @@ public class Metamorphose : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slice" && !sliced)
         {
-
-            GameObject hache = collision.gameObject.GetComponent<GameObject>();
-
-            //ActionBasedController controller = 
+            Debug.Log("Tag");
+            Debug.Log(collision.gameObject.tag);
 
             scoreScript.addScore();
             progressBar.addValue();
