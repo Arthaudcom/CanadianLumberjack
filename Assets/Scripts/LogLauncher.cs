@@ -30,6 +30,7 @@ public class LogLauncher : MonoBehaviour
         {
             time += interpolationPeriod;
 
+
             GameObject newBuche = Instantiate(monPrefab, new Vector3(133, 0.5f, 81), Quaternion.identity);
             liste.Add(newBuche);
             Rigidbody rb = newBuche.GetComponent<Rigidbody>();

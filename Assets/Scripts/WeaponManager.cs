@@ -6,6 +6,10 @@ public class WeaponManager : MonoBehaviour
 {
     public int score;
     public List<GameObject> weapons;
+    public List<GameObject> activeWeapons;
+
+    int i = 0;
+
     public int currentWeapon = 0;
     public int limit;
     public Transform camPos;
@@ -25,6 +29,14 @@ public class WeaponManager : MonoBehaviour
             limit += 500;
             instanciateWeapon(weapons[Random.Range(0, weapons.Count - 1)]);
             currentWeapon++;
+            i++;
+
+            if(i > 3)
+            {
+                GameObject toDestroy = activeWeapons[0];
+                activeWeapons.Remove(toDestroy);
+                Destroy(toDestroy);
+            }
 
         }
     }
