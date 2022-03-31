@@ -31,8 +31,8 @@ public class LogLauncher : MonoBehaviour
         z = (vel.z / 1.9f) * 50;
 
         vel.y = y;
-        vel.x = Random.Range(x - 15, x + 15);
-        vel.z = Random.Range(z - 15, z + 15);
+        vel.x = Random.Range(x - 35, x + 35);
+        vel.z = Random.Range(z - 35, z + 35);
 
         return vel;
     }
