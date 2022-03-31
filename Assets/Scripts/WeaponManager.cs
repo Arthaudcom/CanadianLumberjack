@@ -47,6 +47,7 @@ public class WeaponManager : MonoBehaviour
         if(weapon != null)
         {
             GameObject newWeapon = Instantiate(weapon, new Vector3(133, 0.5f, 81), Quaternion.identity);
+            activeWeapons.Add(newWeapon);
             Rigidbody rb = newWeapon.GetComponent<Rigidbody>();
             //rb.AddForce(Random.Range(-23,-23), Random.Range(10,10), Random.Range(-5, -5), ForceMode.Impulse);
 
