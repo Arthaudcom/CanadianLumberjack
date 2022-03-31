@@ -11,7 +11,6 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public Score gameManager;
     public Transform camPos;
-    public ArmesScript armesScript;
     public bool t = true;
 
     // Start is called before the first frame update
@@ -25,17 +24,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //lignes pour que le text se trouve en face du regard du joueur
-        //Vector3 targetPoint = Camera.main.transform.position;
-        //scoreText.transform.LookAt(targetPoint, Vector3.up);
 
-
-        if(score >= 500 && t)
-        {
-            armesScript.deleteArmes();
-            armesScript.newArme();
-            t = false;
-        }
     }
 
     public void addScore()
